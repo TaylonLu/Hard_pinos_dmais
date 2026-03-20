@@ -1,0 +1,17 @@
+module rom_bias (
+    input wire clk,
+    input wire [7:0] addr,
+    output reg signed [15:0] q
+);
+
+    reg signed [15:0] mem [0:127];
+
+    initial begin
+        $readmemh("bias.hex", mem);
+    end
+
+    always @(posedge clk) begin
+        q <= mem[addr];
+    end
+
+endmodule

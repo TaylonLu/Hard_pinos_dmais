@@ -1,0 +1,9 @@
+module rom_weights (
+    input wire clk,
+    input wire [16:0] addr, // até 100351
+    output reg signed [15:0] q
+);
+
+
+
+endmodule

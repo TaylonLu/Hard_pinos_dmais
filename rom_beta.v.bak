@@ -1,0 +1,17 @@
+module rom_beta (
+    input  wire        clk,
+    input  wire [10:0] addr,
+    output reg  signed [15:0] q
+);
+
+    reg signed [15:0] mem [0:1799];
+
+    initial begin
+        $readmemh("beta.hex", mem);
+    end
+
+    always @(posedge clk) begin
+        q <= mem[addr];
+    end
+
+endmodule

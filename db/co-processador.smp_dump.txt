@@ -1,0 +1,14 @@
+
+State Machine - |top_layer|data_state
+Name data_state.BETA_H data_state.IDLE_H data_state.PESO_H 
+data_state.IDLE_H 0 0 0 
+data_state.PESO_H 0 1 1 
+data_state.BETA_H 1 1 0 
+
+State Machine - |top_layer|cordicTanh:u_cordic|CS
+Name CS.DIVIDE CS.REPEAT CS.TANH CS.RST CS.EXTR 
+CS.RST 0 0 0 0 0 
+CS.TANH 0 0 1 1 0 
+CS.REPEAT 0 1 0 1 0 
+CS.DIVIDE 1 0 0 1 0 
+CS.EXTR 0 0 0 1 1 
