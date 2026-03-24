@@ -1,0 +1,16 @@
+
+State Machine - |elm_fsm|state
+Name state.ERROR_ST state.DONE_ST state.ARG_WAIT state.ARG_FEED state.O_WRITE state.O_WAIT state.O_RUN state.O_RESET_MAC state.H_WRITE state.H_WAIT state.H_RUN state.H_RESET_MAC state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.H_RESET_MAC 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.H_RUN 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.H_WAIT 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.H_WRITE 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.O_RESET_MAC 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.O_RUN 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.O_WAIT 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.O_WRITE 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ARG_FEED 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ARG_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.DONE_ST 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ERROR_ST 1 0 0 0 0 0 0 0 0 0 0 0 1 

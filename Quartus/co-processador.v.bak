@@ -1,0 +1,130 @@
+module fsm (
+    input wire clk,
+    input wire reset,
+    input wire start,
+
+    // interface com MAC
+    output reg mac_start,
+    input wire mac_done,
+    input wire signed [15:0] mac_out, // saída do MAC
+
+    // controle de memória
+    output reg [9:0] addr_img,
+    output reg [9:0] addr_w,
+    output reg [9:0] addr_b,
+
+    // status
+    output reg [1:0] status, // 00=BUSY, 01=DONE, 10=ERROR
+    output reg [3:0] pred    // resultado final 0..9
+);
+
+    reg [2:0] state, next_state;
+    reg [9:0] pixel_idx;       // contador de pixels (0..783)
+    reg [9:0] neuron_idx;      // neurônio da camada oculta
+    reg [3:0] classe_idx;      // neurônio da camada de saída
+    reg signed [15:0] max_val;
+    reg signed [15:0] y_val;
+
+    localparam IDLE           = 3'd0;
+    localparam PROCESS_HIDDEN = 3'd1;
+    localparam PROCESS_OUTPUT = 3'd2;
+    localparam ARGMAX         = 3'd3;
+    localparam DONE_STATE     = 3'd4;
+    localparam ERROR_STATE    = 3'd5;
+
+    // Estado sequencial
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            state <= IDLE;
+        else
+            state <= next_state;
+    end
+
+    // Transição de estados
+    always @(*) begin
+        case (state)
+            IDLE: 
+					next_state = start ? PROCESS_HIDDEN : IDLE;
+            PROCESS_HIDDEN: 
+					next_state = (neuron_idx == N_HIDDEN && pixel_idx == 784 && mac_done) ? PROCESS_OUTPUT : PROCESS_HIDDEN;
+            PROCESS_OUTPUT: 
+					next_state = (classe_idx == 10 && mac_done) ? ARGMAX : PROCESS_OUTPUT;
+            ARGMAX: 
+					next_state = DONE_STATE;
+            DONE_STATE: 
+					next_state = !start ? IDLE : DONE_STATE;
+            default: 
+					next_state = ERROR_STATE;
+        endcase
+    end
+
+    // Lógica de saída e contadores
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            pixel_idx  <= 0;
+            neuron_idx <= 0;
+            classe_idx <= 0;
+            mac_start  <= 0;
+            status     <= 2'b00;
+            pred       <= 0;
+            max_val    <= -16'sh7FFF;
+        end else begin
+            case (state)
+
+                IDLE: begin
+                    status <= 2'b00;
+                    pixel_idx <= 0;
+                    neuron_idx <= 0;
+                    classe_idx <= 0;
+                    max_val <= -16'sh7FFF;
+                end
+
+                // CAMADA OCULTA
+                PROCESS_HIDDEN: begin
+                    mac_start <= 1;
+
+                    addr_img <= pixel_idx;
+                    addr_w   <= neuron_idx * 784 + pixel_idx;
+                    addr_b   <= neuron_idx;
+
+                    if (mac_done) begin
+                        pixel_idx <= pixel_idx + 1;
+
+                        // quando todos os pixels do neurônio forem processados
+                        if (pixel_idx == 783) begin
+                            pixel_idx <= 0;
+                            neuron_idx <= neuron_idx + 1;
+                            mac_start <= 0; // reinicia MAC para próximo neurônio
+                        end
+                    end
+                end
+
+                // CAMADA DE SAÍDA
+                PROCESS_OUTPUT: begin
+                    mac_start <= 1;
+                    addr_w <= classe_idx;
+
+                    if (mac_done) begin
+                        y_val <= mac_out; // captura saída do MAC
+
+                        if (y_val > max_val) begin
+                            max_val <= y_val;
+                            pred <= classe_idx;
+                        end
+
+                        classe_idx <= classe_idx + 1;
+                        mac_start <= 0;
+                    end
+                end
+
+                ARGMAX: begin
+                    // já calculado durante PROCESS_OUTPUT
+                end
+
+                DONE_STATE: status <= 2'b01; // DONE
+                ERROR_STATE: status <= 2'b10;
+
+            endcase
+        end
+    end
+endmodule

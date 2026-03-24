@@ -1,0 +1,60 @@
+module ativacao_sigmoid (
+    input wire signed [15:0] d_in,
+    output reg signed [15:0] d_out
+);
+
+// Constantes 16 bits
+localparam signed [15:0] CONST_0_5   = 16'h0080; // 0.5
+localparam signed [15:0] CONST_0_56  = 16'h008F; // ~0.56
+localparam signed [15:0] CONST_0_625 = 16'h00A0; // 0.625
+localparam signed [15:0] CONST_0_72  = 16'h00B8; // ~0.72
+localparam signed [15:0] CONST_0_85  = 16'h00DA; // ~0.85
+localparam signed [15:0] CONST_0_93  = 16'h00EE; // ~0.93
+
+// Limites 16 bits
+localparam signed [15:0] LIM_0_5 = 16'h0080; // 0.5
+localparam signed [15:0] LIM_1   = 16'h0100; // 1.0
+localparam signed [15:0] LIM_2   = 16'h0200; // 2.0
+localparam signed [15:0] LIM_3   = 16'h0300; // 3.0
+localparam signed [15:0] LIM_4_5 = 16'h0480; // 4.5
+
+reg negativo;
+reg signed [15:0] x;
+
+always @(*) begin
+    // Sinal
+    negativo = d_in[15];
+    x = negativo ? -d_in : d_in;
+
+    // Aproximação com mais regiões
+    if (x < LIM_0_5) begin
+        // 0.5 + x/4
+        d_out = CONST_0_5 + (x >>> 2);
+    end
+    else if (x < LIM_1) begin
+        // 0.56 + x/5 (~shift+ajuste)
+        d_out = CONST_0_56 + (x >>> 2) - (x >>> 4);
+    end
+    else if (x < LIM_2) begin
+        // 0.625 + x/8
+        d_out = CONST_0_625 + (x >>> 3);
+    end
+    else if (x < LIM_3) begin
+        // 0.72 + x/16
+        d_out = CONST_0_72 + (x >>> 4);
+    end
+    else if (x < LIM_4_5) begin
+        // 0.85 + x/32
+        d_out = CONST_0_85 + (x >>> 5);
+    end
+    else begin
+        // Saturação
+        d_out = 16'h0100; // 1.0
+    end
+
+    // Simetria da sigmoid
+    if (negativo)
+        d_out = 16'h0100 - d_out;
+end
+
+endmodule
