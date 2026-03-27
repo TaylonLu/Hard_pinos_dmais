@@ -1,0 +1,322 @@
+// Copyright (C) 2025  Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Altera and sold by Altera or its authorized distributors.  Please
+// refer to the Altera Software License Subscription Agreements 
+// on the Quartus Prime software download page.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/26/2026 17:02:58"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          mac
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mac_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [15:0] bias;
+reg clk;
+reg [15:0] peso;
+reg [15:0] pixel;
+reg reset;
+reg start;
+// wires                                               
+wire [9:0] addr;
+wire done;
+wire [15:0] saida;
+
+// assign statements (if any)                          
+mac i1 (
+// port map - connection between master ports and signals/registers   
+	.addr(addr),
+	.bias(bias),
+	.clk(clk),
+	.done(done),
+	.peso(peso),
+	.pixel(pixel),
+	.reset(reset),
+	.saida(saida),
+	.start(start)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// bias[ 15 ]
+initial
+begin
+	bias[15] = 1'b0;
+end 
+// bias[ 14 ]
+initial
+begin
+	bias[14] = 1'b0;
+end 
+// bias[ 13 ]
+initial
+begin
+	bias[13] = 1'b0;
+end 
+// bias[ 12 ]
+initial
+begin
+	bias[12] = 1'b0;
+end 
+// bias[ 11 ]
+initial
+begin
+	bias[11] = 1'b0;
+end 
+// bias[ 10 ]
+initial
+begin
+	bias[10] = 1'b0;
+end 
+// bias[ 9 ]
+initial
+begin
+	bias[9] = 1'b0;
+end 
+// bias[ 8 ]
+initial
+begin
+	bias[8] = 1'b0;
+end 
+// bias[ 7 ]
+initial
+begin
+	bias[7] = 1'b0;
+end 
+// bias[ 6 ]
+initial
+begin
+	bias[6] = 1'b0;
+end 
+// bias[ 5 ]
+initial
+begin
+	bias[5] = 1'b0;
+end 
+// bias[ 4 ]
+initial
+begin
+	bias[4] = 1'b0;
+end 
+// bias[ 3 ]
+initial
+begin
+	bias[3] = 1'b0;
+end 
+// bias[ 2 ]
+initial
+begin
+	bias[2] = 1'b0;
+end 
+// bias[ 1 ]
+initial
+begin
+	bias[1] = 1'b0;
+end 
+// bias[ 0 ]
+initial
+begin
+	bias[0] = 1'b0;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #2500 1'b1;
+	#2500;
+end 
+// peso[ 15 ]
+initial
+begin
+	peso[15] = 1'b0;
+end 
+// peso[ 14 ]
+initial
+begin
+	peso[14] = 1'b0;
+end 
+// peso[ 13 ]
+initial
+begin
+	peso[13] = 1'b0;
+end 
+// peso[ 12 ]
+initial
+begin
+	peso[12] = 1'b0;
+end 
+// peso[ 11 ]
+initial
+begin
+	peso[11] = 1'b0;
+end 
+// peso[ 10 ]
+initial
+begin
+	peso[10] = 1'b0;
+end 
+// peso[ 9 ]
+initial
+begin
+	peso[9] = 1'b0;
+end 
+// peso[ 8 ]
+initial
+begin
+	peso[8] = 1'b0;
+end 
+// peso[ 7 ]
+initial
+begin
+	peso[7] = 1'b0;
+end 
+// peso[ 6 ]
+initial
+begin
+	peso[6] = 1'b0;
+end 
+// peso[ 5 ]
+initial
+begin
+	peso[5] = 1'b0;
+end 
+// peso[ 4 ]
+initial
+begin
+	peso[4] = 1'b0;
+end 
+// peso[ 3 ]
+initial
+begin
+	peso[3] = 1'b0;
+end 
+// peso[ 2 ]
+initial
+begin
+	peso[2] = 1'b0;
+end 
+// peso[ 1 ]
+initial
+begin
+	peso[1] = 1'b0;
+end 
+// peso[ 0 ]
+initial
+begin
+	peso[0] = 1'b0;
+end 
+// pixel[ 15 ]
+initial
+begin
+	pixel[15] = 1'b0;
+end 
+// pixel[ 14 ]
+initial
+begin
+	pixel[14] = 1'b0;
+end 
+// pixel[ 13 ]
+initial
+begin
+	pixel[13] = 1'b0;
+end 
+// pixel[ 12 ]
+initial
+begin
+	pixel[12] = 1'b0;
+end 
+// pixel[ 11 ]
+initial
+begin
+	pixel[11] = 1'b0;
+end 
+// pixel[ 10 ]
+initial
+begin
+	pixel[10] = 1'b0;
+end 
+// pixel[ 9 ]
+initial
+begin
+	pixel[9] = 1'b0;
+end 
+// pixel[ 8 ]
+initial
+begin
+	pixel[8] = 1'b0;
+end 
+// pixel[ 7 ]
+initial
+begin
+	pixel[7] = 1'b0;
+end 
+// pixel[ 6 ]
+initial
+begin
+	pixel[6] = 1'b0;
+end 
+// pixel[ 5 ]
+initial
+begin
+	pixel[5] = 1'b0;
+end 
+// pixel[ 4 ]
+initial
+begin
+	pixel[4] = 1'b0;
+end 
+// pixel[ 3 ]
+initial
+begin
+	pixel[3] = 1'b0;
+end 
+// pixel[ 2 ]
+initial
+begin
+	pixel[2] = 1'b0;
+end 
+// pixel[ 1 ]
+initial
+begin
+	pixel[1] = 1'b0;
+end 
+// pixel[ 0 ]
+initial
+begin
+	pixel[0] = 1'b0;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+
+// start
+initial
+begin
+	start = 1'b0;
+end 
+endmodule
+

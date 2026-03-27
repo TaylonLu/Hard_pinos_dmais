@@ -1,5 +1,5 @@
 EDA Netlist Writer report for co-processador
-Tue Mar 24 11:36:04 2026
+Fri Mar 27 07:10:54 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -37,9 +37,9 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 24 11:36:04 2026 ;
+; EDA Netlist Writer Status ; Successful - Fri Mar 27 07:10:54 2026 ;
 ; Revision Name             ; co-processador                        ;
-; Top-level Entity Name     ; mac                                   ;
+; Top-level Entity Name     ; elm_fsm                               ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------+
-; Simulation Generated Files                                     ;
-+----------------------------------------------------------------+
-; Generated Files                                                ;
-+----------------------------------------------------------------+
-; /home/duda/Documents/SD_01/simulation/questa/co-processador.vo ;
-+----------------------------------------------------------------+
++---------------------------------------------------------------+
+; Simulation Generated Files                                    ;
++---------------------------------------------------------------+
+; Generated Files                                               ;
++---------------------------------------------------------------+
+; /home/duda/Documents/SD_01/simulation/qsim//co-processador.vo ;
++---------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,28 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Tue Mar 24 11:35:59 2026
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off co-processador -c co-processador
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Fri Mar 27 07:10:54 2026
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/duda/Documents/SD_01/simulation/qsim/ co-processador -c co-processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file co-processador.vo in folder "/home/duda/Documents/SD_01/simulation/questa/" for EDA simulation tool
+Info (204019): Generated file co-processador.vo in folder "/home/duda/Documents/SD_01/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 663 megabytes
-    Info: Processing ended: Tue Mar 24 11:36:04 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 678 megabytes
+    Info: Processing ended: Fri Mar 27 07:10:54 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

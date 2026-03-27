@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/duda/Documents/SD_01/simulation/modelsim
+velm_fsm
+!s110 1774606165
+!i10b 1
+!s100 9kCOCVN?_McO[zh7AJX9K2
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Ifm6A]a5VdcmfQ?^RehDg52
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1774606159
+8elm_fsm.v
+Felm_fsm.v
+!i122 1
+L0 7 372
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1774606165.000000
+!s107 elm_fsm_vlg_vec_tst.v|elm_fsm.v|
+!s90 elm_fsm.v|elm_fsm_vlg_vec_tst.v|
+!i113 1
+tCvgOpt 0

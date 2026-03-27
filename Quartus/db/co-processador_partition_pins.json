@@ -24,194 +24,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "img_addr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "img_addr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[10]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[11]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[12]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[13]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[14]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[15]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[16]",
-					"strict" : false
-				},
-				{
-					"name" : "win_addr[17]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_addr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_addr[10]",
-					"strict" : false
-				},
-				{
 					"name" : "hid_wr_addr[0]",
 					"strict" : false
 				},
@@ -960,15 +772,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "img_data[0]",
-					"strict" : false
-				},
-				{
 					"name" : "hid_rd_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "img_data[1]",
 					"strict" : false
 				},
 				{
@@ -976,15 +780,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "img_data[2]",
-					"strict" : false
-				},
-				{
 					"name" : "hid_rd_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "img_data[3]",
 					"strict" : false
 				},
 				{
@@ -992,15 +788,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "img_data[4]",
-					"strict" : false
-				},
-				{
 					"name" : "hid_rd_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "img_data[5]",
 					"strict" : false
 				},
 				{
@@ -1008,15 +796,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "img_data[6]",
-					"strict" : false
-				},
-				{
 					"name" : "hid_rd_data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "img_data[7]",
 					"strict" : false
 				},
 				{
@@ -1033,198 +813,6 @@
 				},
 				{
 					"name" : "hid_rd_data[15]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[8]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[8]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[10]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[10]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[12]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[12]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[13]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[13]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[14]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[14]",
-					"strict" : false
-				},
-				{
-					"name" : "beta_data[15]",
-					"strict" : false
-				},
-				{
-					"name" : "win_data[15]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[8]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[10]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[11]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[12]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[13]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[14]",
-					"strict" : false
-				},
-				{
-					"name" : "bias_data[15]",
 					"strict" : false
 				},
 				{
