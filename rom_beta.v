@@ -7,7 +7,8 @@ module rom_beta (
     reg signed [15:0] mem [0:1799];
 
     initial begin
-    end
+    
+	 end
 
     always @(posedge clk) begin
         q <= mem[address];
