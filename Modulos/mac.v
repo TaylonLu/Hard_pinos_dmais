@@ -1,3 +1,58 @@
+
+module mac (
+    input  wire        clk,
+    input  wire        reset,
+    input  wire        start,
+    input  wire signed [15:0] pixel,
+    input  wire signed [15:0] peso,
+    input  wire signed [15:0] bias,
+    input  wire [9:0]  n_ops,
+    input  wire [4:0]  shift,   
+    output reg  [9:0]  addr,
+    output reg         done,
+    output reg  signed [15:0] saida
+);
+
+    integer mac_product;
+    initial begin
+        mac_product = $fopen("/home/duda/Documents/Test_verilog/Modulos/Saida/SAIDA_MAC.txt", "w");
+    end
+
+    reg  signed [31:0] acumulador;
+    wire signed [31:0] produto = pixel * peso;
+    wire signed [31:0] saida_normalizada = (acumulador + produto + bias) >>> shift;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            addr       <= 0;
+            acumulador <= 0;
+            saida      <= 0;
+            done       <= 0;
+        end else begin
+            if (done) begin
+                if (!start) begin
+                    done       <= 0;
+                    acumulador <= 0;
+                    addr       <= 0;
+                end
+            end else if (start) begin
+                $fdisplay(mac_product, "pixel %d e Peso %d  MAC (endereco %d, produto= %d, resultado acumulado= %d, bias= %d)", pixel, peso, addr, produto, acumulador + produto, bias);
+                acumulador <= acumulador + produto;
+                if (addr == n_ops - 1) begin
+                    saida <= saida_normalizada[15:0];
+                    done  <= 1;
+                end else begin
+                    addr <= addr + 1;
+                end
+            end
+            
+        end
+    end
+endmodule
+
+
+
+/*
 module mac (
     input  wire clk,
     input  wire reset,
@@ -56,3 +111,5 @@ always @(posedge clk or posedge reset) begin
 end
 
 endmodule
+
+*/
